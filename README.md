@@ -34,6 +34,17 @@ Default: false
 
 if this options sets to false, tasks will be printed when task's options.includeToManual is true.
 
+#### includeToManual
+Type: `Boolean`
+
+Note that this option can be added to any task.
+
+#### manualText
+Type: `String`
+
+Note that this option can be added to any task and it's target option.
+
+
 ### Usage Examples
 
 Refer to Gruntfile.js
