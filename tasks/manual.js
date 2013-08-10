@@ -86,7 +86,7 @@ module.exports = function(grunt) {
         grunt.log
             .subhead("=== " + packageJSON.name + " application grunt task manual ===");
 
-        grunt.log.subhead('Available tasks');
+        grunt.log.subhead('Main tasks');
 
         table(tasks.map(function(task) {
             var info = task.info,
