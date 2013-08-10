@@ -30,7 +30,7 @@ _Run this task with the `grunt manual` command._
 
 #### printAllTasks
 Type: `Boolean`  
-Default: false
+Default: true
 
 if this options sets to false, tasks will be printed when task's options.includeToManual is true.
 
