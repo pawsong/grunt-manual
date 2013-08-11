@@ -39,7 +39,8 @@ module.exports = function(grunt) {
                         targetMsg = prop + ": " + item[3][prop];
 
                         grunt.log.writetableln(widths,
-                            ['', grunt.util._.pad("", col1len + TARGET_DESC_PADDING_LEN), '', targetMsg]);
+                            ['', grunt.util._.pad("", col1len), '',
+                                grunt.util._.pad("", TARGET_DESC_PADDING_LEN) + targetMsg]);
                     }
                 });
             }
@@ -63,10 +64,6 @@ module.exports = function(grunt) {
             var task = grunt.task._tasks[name],
                 config = grunt.config(name) || {};
 
-//            if(name === self.name) {
-//                return;
-//            }
-
             if(!options.printAllTasks) {
 
                 if(!(config.options && config.options.includeToManual)) {
@@ -84,9 +81,8 @@ module.exports = function(grunt) {
 
         // Start print!
         grunt.log
-            .subhead("=== " + packageJSON.name + " application grunt task manual ===");
-
-        grunt.log.subhead('Main tasks');
+            .subhead("=== " + packageJSON.name + " application grunt task manual ===")
+            .writeln();
 
         table(tasks.map(function(task) {
             var info = task.info,
